@@ -15,14 +15,16 @@ class DatabaseActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_database)
 
+        //initializing spinner
         val spin = findViewById<Spinner>(R.id.spinner)
         spin.onItemSelectedListener = this
-        val ad: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, books)
-        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val ad: ArrayAdapter<*> = ArrayAdapter<Any?>(this, android.R.layout.simple_spinner_item, books) // adding dropdown values
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) //setting dropdown layout
         spin.adapter = ad
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
+        //performing operations on selected item
         Toast.makeText(applicationContext, books[position], Toast.LENGTH_LONG).show()
     }
 

@@ -16,8 +16,11 @@ class ApiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_api)
 
+        //recycle view initialization
         val recyclerView = findViewById(R.id.recycleView) as RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+
+        //users array list
         val  users = ArrayList<User>()
         users.add(User("lorem ipsum","Ranchi, India"))
         users.add(User("lorem ipsum","Kanchi, India"))

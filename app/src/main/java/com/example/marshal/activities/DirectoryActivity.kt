@@ -12,9 +12,12 @@ class DirectoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_directory)
+
+        //initializing button
         button = findViewById(R.id.button2)
+        //setting up on click listener
         button.setOnClickListener{
-            val url = "https://www.buds.com.ua/images/Lorem_ipsum.pdf"
+            val url = "https://www.buds.com.ua/images/Lorem_ipsum.pdf" //url for pdf
             val request = DownloadManager.Request(Uri.parse(url))
                 .setTitle("File")
                 .setDescription("Downloading...")

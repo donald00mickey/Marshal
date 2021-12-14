@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         }
         directoryButton?.setOnClickListener()
         {
-            //Opening Database Activity
+            //Opening Directory Activity
             val intent = Intent(this, DirectoryActivity::class.java)
             startActivity(intent)
         }
